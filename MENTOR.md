@@ -1,231 +1,258 @@
 # MENTOR.md
 
-# Engineering Mentorship Agreement
+# Engineering Mentorship Constitution
 
 **Version:** 1.0
-**Started:** June 2026
-**Mentor:** ChatGPT
-**Mentee:** Emmy
+**Created:** June 2026
+**Mentorship Started:** June 2026
 
 ---
 
-# Mission
+# Purpose
 
-My mission is not to simply complete Learn2Earn projects.
+This repository documents my journey to becoming a professional software engineer.
 
-My mission is to become a world-class Software Engineer, AI Engineer, and ultimately a Robotics Engineer.
+It is not just a collection of notes or completed projects. It is a record of how I learn, think, design, build, and grow.
 
-Every project, lesson, and challenge should move me closer to that goal.
+The purpose of this mentorship is to develop the mindset, habits, and technical skills required to become an engineer capable of solving meaningful real-world problems.
 
 ---
 
-# Long-Term Vision
+# Engineering Identity
 
-## Year 1
-- Complete Learn2Earn successfully.
-- Master Go.
-- Build strong backend engineering skills.
-- Learn software engineering principles.
-- Build AI foundations.
-- Create a professional GitHub portfolio.
+I am an engineering apprentice.
 
-## Year 2+
-- Learn C++.
-- Learn ROS 2.
-- Study Computer Vision.
-- Study Control Systems.
-- Build robotics projects.
-- Contribute to open source.
-- Work towards Robotics Engineering.
+My current focus is software engineering through the Learn2Earn (01 Edu) curriculum.
+
+My long-term goal is to become an AI Engineer and ultimately a Robotics Engineer.
+
+I understand that programming languages, frameworks, and tools will change throughout my career. My priority is to master engineering thinking rather than chase technologies.
 
 ---
 
 # Mentorship Philosophy
 
-This mentorship is based on understanding, not memorization.
+This mentorship is based on understanding rather than memorization.
 
-The goal is to think like an engineer rather than simply write code.
+The objective is not simply to finish projects.
 
-The mentor should guide my thinking, challenge my decisions, and encourage me to discover solutions instead of immediately providing answers.
+The objective is to become the kind of engineer who can confidently solve unfamiliar problems.
+
+Every project is treated as an opportunity to improve technical thinking, communication, and engineering discipline.
 
 ---
 
 # Learning Principles
 
-1. Understand before coding.
+1. Understand the problem before searching for solutions.
 2. Design before implementation.
-3. Write clean and readable code.
-4. Test everything important.
-5. Refactor continuously.
-6. Learn from mistakes.
-7. Document important lessons.
-8. Consistency is better than intensity.
-9. Build beyond the curriculum.
-10. Never stop asking "Why?"
+3. Simplicity is preferred over cleverness.
+4. Readability is more valuable than short code.
+5. Build incrementally.
+6. Learn from mistakes instead of hiding them.
+7. Ask "Why?" before asking "How?"
+8. Reflect after every project.
+9. Document important lessons.
+10. Never stop learning.
 
 ---
 
-# Rules for the Mentor
+# Engineering Workflow
 
-The mentor should:
+Every project follows the same process.
 
-- Explain concepts clearly.
-- Ask questions that improve my thinking.
-- Review my code honestly.
-- Point out bad engineering practices.
-- Suggest improvements after a project is complete.
-- Encourage independent problem solving.
-- Keep me focused on long-term growth.
-- Connect Learn2Earn projects to real-world engineering.
+Research
 
-The mentor should NOT:
+↓
 
-- Solve assignments without explanation.
-- Encourage copying code.
-- Hide mistakes to make me feel better.
-- Prioritize speed over understanding.
+Understand Requirements
+
+↓
+
+Design Architecture
+
+↓
+
+Plan Implementation
+
+↓
+
+Build
+
+↓
+
+Test
+
+↓
+
+Review
+
+↓
+
+Refactor
+
+↓
+
+Document
+
+↓
+
+Reflect
+
+Coding is only one part of engineering.
 
 ---
 
-# Rules for Me
+# Roles
+
+## My Responsibilities
 
 I will:
 
-- Attempt problems before asking for help.
-- Explain my thought process.
-- Accept constructive criticism.
-- Keep my engineering journal updated.
-- Document lessons learned.
-- Build consistently every week.
-- Ask questions whenever I feel stuck.
+* Attempt every challenge before asking for help.
+* Explain my reasoning when requesting assistance.
+* Accept constructive criticism.
+* Keep my documentation up to date.
+* Learn from every review.
+* Stay consistent even when progress feels slow.
+
+## Mentor Responsibilities
+
+My mentor should:
+
+* Guide rather than simply provide answers.
+* Encourage independent thinking.
+* Explain concepts clearly.
+* Challenge weak assumptions.
+* Review code honestly.
+* Recommend industry best practices.
+* Connect projects to real-world engineering.
+* Encourage continuous improvement.
 
 ---
 
-# Communication Style
+# Code Review Standards
 
-When discussing a project, follow this order:
+Every project should be reviewed for:
 
-1. Understand the problem.
-2. Identify the required concepts.
-3. Design the architecture.
-4. Discuss possible approaches.
-5. Compare trade-offs.
-6. Implement.
-7. Review.
-8. Refactor.
-9. Reflect.
+* Correctness
+* Readability
+* Simplicity
+* Maintainability
+* Error handling
+* Performance
+* Scalability
+* Project organization
+* Idiomatic Go
+* Documentation
 
----
+Passing a project is the minimum standard.
 
-# Code Review Checklist
-
-Every review should consider:
-
-- Readability
-- Naming
-- Simplicity
-- Error handling
-- Project structure
-- Performance
-- Scalability
-- Reusability
-- Idiomatic Go
-- Testing
+Understanding the project is the real objective.
 
 ---
 
-# Engineering Mindset
+# Decision Framework
 
-Always ask:
+Before making technical decisions, ask:
 
-- Why does this exist?
-- Can it be simpler?
-- Can it scale?
-- Is it maintainable?
-- Would another engineer understand it?
-- What trade-offs am I making?
+* Is this correct?
+* Is it simple?
+* Is it maintainable?
+* Is it testable?
+* Can another engineer understand it?
+* What trade-offs am I making?
+* Is there a better design?
 
 ---
 
 # AI Usage Policy
 
-AI is a mentor, not a replacement for thinking.
+Artificial Intelligence is a mentor, not a shortcut.
 
 Use AI to:
 
-- Learn concepts.
-- Review code.
-- Debug.
-- Explore alternatives.
-- Improve architecture.
-- Understand documentation.
+* Learn concepts.
+* Review designs.
+* Debug problems.
+* Explore alternatives.
+* Improve code quality.
+* Strengthen understanding.
 
-Avoid using AI to:
+Do not use AI to:
 
-- Copy solutions without understanding.
-- Skip learning.
-- Bypass project requirements.
+* Copy project solutions.
+* Skip the thinking process.
+* Avoid reading documentation.
+* Bypass learning.
+
+If I cannot explain the solution, I have not learned it.
 
 ---
 
 # Weekly Routine
 
-Each week should include:
+Every week should include:
 
-- Current Learn2Earn project.
-- Reading official documentation.
-- Reviewing previous code.
-- Solving algorithm problems.
-- Writing journal entries.
-- Updating project notes.
+* Learn2Earn project work.
+* Reading official documentation.
+* Code review.
+* Reflection.
+* Journal updates.
+* Knowledge base updates.
 
----
-
-# Success Metrics
-
-Success is NOT measured by:
-
-- Number of completed projects.
-- Lines of code.
-- Speed.
-
-Success IS measured by:
-
-- Better engineering decisions.
-- Better problem-solving.
-- Cleaner code.
-- Stronger understanding.
-- Consistency.
-- Professional growth.
+Consistency is more valuable than intensity.
 
 ---
 
 # Core Values
 
-Curiosity
-
-Discipline
-
-Integrity
-
-Humility
-
-Craftsmanship
-
-Consistency
-
-Continuous Learning
-
-Ownership
+* Curiosity
+* Discipline
+* Integrity
+* Humility
+* Craftsmanship
+* Ownership
+* Continuous Learning
 
 ---
 
-# The Goal
+# Definition of Success
 
-Don't optimize for completing projects.
+Success is not measured by:
 
-Optimize for becoming an engineer.
+* Number of projects completed.
+* Lines of code written.
+* Speed of completion.
 
-Projects will end.
+Success is measured by:
 
-Engineering thinking lasts a lifetime.
+* Better engineering decisions.
+* Better communication.
+* Cleaner code.
+* Deeper understanding.
+* Stronger problem-solving skills.
+* Consistent growth.
+
+---
+
+# Mentorship Agreement
+
+This repository is the single source of truth for my engineering journey.
+
+Whenever I continue this mentorship in a new conversation, I will provide:
+
+* MENTOR.md
+* Current Sprint
+* Current Project
+* Relevant Project Notes (if applicable)
+
+This allows the mentorship to continue consistently over time.
+
+---
+
+# Final Principle
+
+> "Do not optimize for completing projects.
+
+> Optimize for becoming the engineer who can build any project."

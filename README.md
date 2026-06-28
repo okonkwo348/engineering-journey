@@ -145,7 +145,7 @@ The goal isn't just to complete projects—it's to become a thoughtful, professi
 
 **Who are you as an engineer?**
 
-I am an enginner that build reliable proffesional and effecient AI system that solve problems. 
+I am an enginner that build reliable proffesional and effecient AI system that solve problems. An engineer who builds thoughtfully, teaches generously, and never stops learning.
 
 **What is your long-term mission?**
 
