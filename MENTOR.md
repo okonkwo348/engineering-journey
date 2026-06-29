@@ -256,3 +256,5 @@ This allows the mentorship to continue consistently over time.
 > "Do not optimize for completing projects.
 
 > Optimize for becoming the engineer who can build any project."
+
+***"Leave every project better than you found yourself."***
