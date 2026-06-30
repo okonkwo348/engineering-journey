@@ -69,3 +69,76 @@ Today I understood that debugging is a process of collecting evidence instead of
 A single log message can narrow a problem down to one specific line of code.
 
 This project also reinforced the importance of separating HTTP handling from business logic.
+
+
+# Sprint 1 – ASCII Art Web Stylize (Day 1)
+
+**Date:** June 30, 2026
+
+## Sprint Goal
+
+Understand how Go serves static files and prepare the project structure for CSS styling without modifying the application's business logic.
+
+---
+
+## Objectives
+
+* Understand what static files are.
+* Learn how browsers request CSS.
+* Learn how Go serves static files.
+* Understand the purpose of `http.FileServer`.
+* Understand the purpose of `http.StripPrefix`.
+* Prepare the project for frontend styling.
+
+---
+
+## Tasks Completed
+
+* Reviewed the new project requirements.
+* Compared `ascii-art-web` with `ascii-art-web-stylize`.
+* Identified which project layers should and should not change.
+* Designed the new folder structure.
+* Learned how static assets are served in Go.
+* Understood the request flow for CSS files.
+
+---
+
+## Engineering Decisions
+
+* Keep the business logic unchanged.
+* Keep handlers unchanged.
+* Keep banner files unchanged.
+* Introduce a `static/` directory for CSS and images.
+* Allow only the presentation layer to change.
+
+---
+
+## Challenges
+
+Initially confused the role of `template.ParseFiles()` with serving static files.
+
+After studying the documentation, understood the responsibilities of:
+
+* `http.FileServer`
+* `http.StripPrefix`
+
+---
+
+## Reflection
+
+Today reinforced an important software engineering principle:
+
+> Improve one layer without affecting unrelated layers.
+
+Instead of changing working backend code, only the presentation layer will evolve.
+
+This is an example of Separation of Concerns.
+
+---
+
+## Next Sprint
+
+* Configure the Go server to serve static files.
+* Link the CSS file to the HTML template.
+* Verify that CSS loads correctly.
+* Begin professional page styling.
