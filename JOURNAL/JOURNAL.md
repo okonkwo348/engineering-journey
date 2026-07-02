@@ -28,3 +28,66 @@ The biggest challenge was debugging why the banner files could not be loaded. In
 Another important lesson was understanding the difference between client errors (4xx) and server errors (5xx). Not every error should return a 500 status code.
 
 Today's work gave me confidence that I can build and debug a complete Go web application while keeping the business logic separate from the HTTP layer.
+
+
+## 2/7/2026
+
+# Learning Journey
+
+Today marks the completion of my first Docker project.
+
+Lessons learned:
+
+- Docker packages applications.
+- Docker builds images from Dockerfiles.
+- Every instruction creates a layer.
+- Layer order affects build speed.
+- Docker caches previous work.
+- GitHub Actions can build Docker images remotely.
+- Docker and GitHub Actions are different technologies.
+
+Major milestone:
+
+I successfully built my Docker image through GitHub Actions without Docker installed locally.
+
+Reflection
+
+Today I moved beyond writing Go programs.
+
+I learned how professional software engineers package and automate applications for deployment.
+
+Next destination
+
+ASCII Art Export File
+
+Long-term roadmap
+
+Go Backend
+
+↓
+
+Docker
+
+↓
+
+Deployment
+
+↓
+
+Groupie Tracker
+
+↓
+
+REST APIs
+
+↓
+
+Databases
+
+↓
+
+Concurrency
+
+↓
+
+AI Engineering
