@@ -605,3 +605,176 @@ Benefits:
 * Keep production images minimal.
 * Copy only runtime requirements into the final image.
 * Understand why a solution works instead of memorizing commands.
+
+
+# Additional Knowledge — Build Time, Runtime & Multi-Stage Builds
+
+## Build Time
+
+Build time begins when Docker executes:
+
+```bash
+docker build -t app .
+```
+
+During build time, Docker reads the Dockerfile from top to bottom and executes every instruction required to create an image.
+
+Instructions processed during build time include:
+
+* FROM
+* WORKDIR
+* COPY
+* RUN
+* EXPOSE (stored as image metadata)
+
+At build time, the application is **not running**. Docker is only assembling the image.
+
+---
+
+## Runtime
+
+Runtime begins when Docker executes:
+
+```bash
+docker run app
+```
+
+Docker creates a container from the previously built image and starts the application.
+
+During runtime, the `CMD` instruction is executed.
+
+Example:
+
+```dockerfile
+CMD ["./ascii-art-web"]
+```
+
+This starts the Go application, which then begins listening for HTTP requests.
+
+---
+
+## Build Time vs Runtime
+
+| Build Time                   | Runtime                          |
+| ---------------------------- | -------------------------------- |
+| Creates an image             | Creates a container              |
+| Executed by `docker build`   | Executed by `docker run`         |
+| Downloads dependencies       | Starts the application           |
+| Compiles the executable      | Serves HTTP requests             |
+| Copies project files         | Reads templates and banner files |
+| Does not run the application | Application is running           |
+
+---
+
+## Multi-Stage Build
+
+A multi-stage build separates building the application from running the application.
+
+### Stage 1 — Builder
+
+Purpose:
+
+* Download dependencies
+* Compile the application
+* Produce the executable
+
+Uses:
+
+```dockerfile
+FROM golang:1.24 AS builder
+```
+
+This stage is temporary and exists only during image creation.
+
+---
+
+### Stage 2 — Runtime
+
+Purpose:
+
+* Contain only what is required to run the application.
+
+Uses:
+
+```dockerfile
+FROM alpine
+```
+
+Docker starts a completely new stage from Alpine Linux.
+
+The previous stage is **not** continued or merged.
+
+Only explicitly copied files are transferred using:
+
+```dockerfile
+COPY --from=builder ...
+```
+
+---
+
+## COPY --from
+
+Example:
+
+```dockerfile
+COPY --from=builder /app/ascii-art-web .
+```
+
+Meaning:
+
+* Go to the stage named `builder`.
+* Find `/app/ascii-art-web`.
+* Copy it into the current working directory of the current stage.
+
+---
+
+## Builder Stage vs Final Image
+
+The builder stage is **not** the final image.
+
+It is a temporary build environment containing:
+
+* Go compiler
+* Go tools
+* Source code
+* Dependencies
+
+Its purpose is to produce the executable.
+
+The final image is an Alpine-based image containing only:
+
+* Executable
+* templates/
+* banner/
+* static/
+
+The Go compiler, source code, and build tools are left behind.
+
+---
+
+## Runtime Assets
+
+Compiled Go code becomes part of the executable.
+
+External resources remain separate files.
+
+Examples:
+
+* templates/
+* banner/
+* static/
+* configuration files
+* images
+
+These must exist inside the runtime container because the application reads them while running.
+
+---
+
+## Engineering Principles Learned
+
+* Separate build environments from runtime environments.
+* Keep production images as small as possible.
+* Copy only what the application needs at runtime.
+* Docker stages are independent.
+* Files move between stages only through `COPY --from`.
+* Think in terms of build architecture rather than Docker commands.

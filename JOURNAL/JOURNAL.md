@@ -91,3 +91,20 @@ Concurrency
 ↓
 
 AI Engineering
+
+
+# Journey Update
+
+Today's lesson completely changed how I view Docker.
+
+Previously, I thought Docker was mainly about running applications inside containers. I now understand that Docker first builds an image and only later runs a container from that image.
+
+The biggest breakthrough was distinguishing between build time and runtime. During the build, Docker creates the image, downloads dependencies, compiles the application, and prepares everything required for execution. The application itself does not run until a container is created.
+
+I also learned that multi-stage builds are an engineering design pattern rather than a Docker trick. The builder stage is simply a temporary workshop used to compile the application, while the runtime stage is a clean production environment containing only what is necessary to execute the program.
+
+Another important realization was the difference between compiled code and runtime assets. Go source files become part of the executable, but templates, banner files, and static assets remain external and must be copied into the final image.
+
+The most valuable lesson from today was learning to think about software systems in terms of build environments and runtime environments instead of focusing only on Docker commands.
+
+> Great software engineering is about separating responsibilities. Build environments create software; runtime environments execute software.
