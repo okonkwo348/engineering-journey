@@ -108,3 +108,25 @@ Another important realization was the difference between compiled code and runti
 The most valuable lesson from today was learning to think about software systems in terms of build environments and runtime environments instead of focusing only on Docker commands.
 
 > Great software engineering is about separating responsibilities. Build environments create software; runtime environments execute software.
+
+
+
+# Journey
+
+## ASCII Art Web Export
+
+Today I learned how file downloads work in HTTP.
+
+Initially, I assumed the export handler could somehow reuse variables created inside the previous request. Through tracing the request lifecycle, I learned that every HTTP request is independent.
+
+I learned that the browser receives a fully rendered HTML page from the first request. The Export button contains query parameters (`text` and `banner`), allowing the browser to send the required information again when requesting the export endpoint.
+
+I also learned that downloading a file is different from rendering an HTML page.
+
+Instead of executing a template, the export handler:
+
+* Generates the ASCII art.
+* Sets the required HTTP headers.
+* Writes the generated ASCII art directly to the response body.
+
+This project greatly improved my understanding of HTTP responses and how browsers interpret them.

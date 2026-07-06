@@ -1,0 +1,56 @@
+# Sprint Summary
+
+## Sprint Goal
+
+Implement file export functionality for the ASCII Art Web application.
+
+---
+
+## Completed
+
+* Understood HTTP headers.
+* Learned query parameters.
+* Created `PageData` struct.
+* Passed multiple values to templates.
+* Added Export endpoint.
+* Read query parameters.
+* Reused ASCII generation logic.
+* Implemented file download.
+* Used:
+
+  * Content-Type
+  * Content-Disposition
+  * Content-Length
+
+* Wrote ASCII art directly into the response body.
+* Created reusable prepareASCII() helper.
+* Removed duplicated business logic.
+* Adopted idiomatic Go error handling.
+---
+
+## Next Tasks
+
+* Test the export feature in multiple browsers.
+* Refactor duplicated logic between `AsciiHandler` and `ExportHandler`.
+* Review project against subject requirements.
+* Perform final code cleanup.
+
+---
+
+## Biggest Lesson
+
+Every HTTP request is independent.
+
+The server does not remember local variables from previous requests.
+
+The browser must provide the necessary information for each new request.
+
+Understanding this request lifecycle made the implementation of the export feature much clearer.
+
+Browsers interpret headers before the response body.
+
+Handlers should focus on HTTP.
+
+Business logic should be reusable.
+
+Returning (value, error) produces cleaner APIs than mixing results and error messages.
